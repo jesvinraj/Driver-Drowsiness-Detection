@@ -126,3 +126,21 @@ img {
 	font-size: 13px;
 	margin: 4px 0;
 }
+.login,
+.register {
+	max-width: 350px;
+	margin: 40px auto;
+	text-align: center;
+}
+
+.login h1,
+.register h1 {
+	text-align: center;
+}
+
+.login form,
+.register form {
+	width: 100%;
+	box-sizing: border-box;
+	text-align: left;
+}
