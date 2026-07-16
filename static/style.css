@@ -88,6 +88,7 @@ form {
 input[type="text"],
 input[type="password"],
 input[type="email"] {
+	display: block;
 	padding: 8px 10px;
 	margin: 6px 0;
 	border: 1px solid #ccc;
@@ -150,4 +151,25 @@ img {
 	width: 100%;
 	box-sizing: border-box;
 	text-align: left;
+}
+
+/* ===== Fix U/P icon labels sitting next to fields instead of above them ===== */
+.login form label,
+.register form label {
+	display: block;
+	margin-top: 12px;
+	font-weight: 600;
+	font-style: normal;
+	color: #990000;
+	font-size: 13px;
+}
+
+.login form label:first-of-type,
+.register form label:first-of-type {
+	margin-top: 0;
+}
+
+.login form label i,
+.register form label i {
+	font-style: normal;
 }
