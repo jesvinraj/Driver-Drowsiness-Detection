@@ -5,6 +5,7 @@ body {
 	background-color: #f7f7f9;
 	color: #2c2c2c;
 	line-height: 1.5;
+	text-align: center;
 }
 
 /* ===== Header ===== */
@@ -46,13 +47,15 @@ h1, h2, h3 {
 	font-weight: 600;
 }
 
-/* ===== Tables (driver list, sleep log, etc.) ===== */
+/* ===== Tables (driver list, sleep log, login tables, etc.) ===== */
 table {
 	border-collapse: collapse;
 	background-color: #ffffff;
 	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
 	border-radius: 6px;
 	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 table th {
@@ -76,8 +79,10 @@ form {
 	background-color: #ffffff;
 	display: inline-block;
 	padding: 20px;
+	margin: 20px auto;
 	border-radius: 8px;
 	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+	text-align: left;
 }
 
 input[type="text"],
@@ -126,6 +131,8 @@ img {
 	font-size: 13px;
 	margin: 4px 0;
 }
+
+/* ===== Login / Register containers ===== */
 .login,
 .register {
 	max-width: 350px;
