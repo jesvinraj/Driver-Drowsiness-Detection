@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Driver Drowsiness Monitoring</title>
+    <link href="../static/style.css" rel="stylesheet" type="text/css">
+  </head>
+<body>
+    <div align="center" class="hd">Driver Drowsiness - Monitoring System</div>
+	<div align="center" class="sd">
+	<a href="/admin">Home</a> |
+	<a href="/add_new">New Driver</a> |
+	<a href="/home">View Driver</a> |
+	<a href="/logout">Logout</a>
+	</div>
+	
+	
+    
+    <p>&nbsp;</p>
+    <h1 align="center">Welcome to Administrator </h1>
+<h3 align="center">Sleep Detected </h3>
+  <table width="829" border="1" align="center">
+    <tr>
+      <th>Car No.</th>
+      <th>Driver</th>
+      <th>Location</th>
+      <th>Date / Time</th>
+    </tr>
+	
+	{% for row in data %}
+	
+    <tr>
+      <td>{{ row[1] }}</td>
+	  <td>{{ row[2] }}</td>
+	  <td>{{ row[3] }}</td>
+	  <td>{{ row[4] }}</td>
+    </tr>
+	 {% endfor %}
+  </table>
+  <form name="form1" method="post" action="/view">
+    <div align="center">
+	<input type="hidden" name="carno" value="{{ carno }}">
+      <input type="submit" name="Submit" value="Delete All">
+      </div>
+  </form>
+  <p align="center">&nbsp;</p>
+</body>
+</html>

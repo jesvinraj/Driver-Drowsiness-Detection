@@ -1,0 +1,56 @@
+<html>
+	<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    //x.innerHTML = "Latitude: " + position.coords.latitude + 
+    //"<br>Longitude: " + position.coords.longitude;	
+	document.form1.lat.value=position.coords.latitude;
+	document.form1.lon.value=position.coords.longitude;
+	
+}
+</script>
+<body onLoad="getLocation()">
+
+
+<form name="form1" method="post" action="/capture">
+<input type="hidden" name="carno" value="{{ carno }}">
+<input type="hidden" name="lat" value="{{ lat }}">
+<input type="hidden" name="lon" value="{{ lon }}">
+</form>
+
+{% if st=="yes" %}
+	<h2 align="center" style="color:#FF0000">Sleep Detected</h2>
+ 	<p align="center">
+
+	<script>
+	//Using setTimeout to execute a function after 5 seconds.
+	setTimeout(function () {
+	//   //Redirect with JavaScript
+	  document.form1.submit();
+	}, 15000);
+	</script>
+	</p>
+{% else %}
+ <h2 align="center" style="color:#0000FF">Driving...</h2>
+ 	<script>
+	//Using setTimeout to execute a function after 5 seconds.
+	setTimeout(function () {
+	//   //Redirect with JavaScript
+	  document.form1.submit();
+	}, 5000);
+	</script>
+	
+{% endif %}
+
+
+</body>
+</html>

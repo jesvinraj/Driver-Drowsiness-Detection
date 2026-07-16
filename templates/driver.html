@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <title>Driver Drowsiness - Monitoring System</title>
+    <link href="../static/style.css" rel="stylesheet" type="text/css">
+	<script>
+/*var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    //x.innerHTML = "Latitude: " + position.coords.latitude + 
+    //"<br>Longitude: " + position.coords.longitude;	
+	document.form1.lat.value=position.coords.latitude;
+	document.form1.lon.value=position.coords.longitude;
+	
+}*/
+</script>
+    <style type="text/css">
+<!--
+.style1 {color: #FF0000}
+-->
+    </style>
+</head>
+<body onLoad="getLocation()">
+    <div align="center" class="hd">Driver Drowsiness - Monitoring System</div>
+	<div align="center" class="sd">
+	<a href="/">Home</a> |
+	<a href="/driver">Driver</a> |
+	<a href="/login">Admin</a> 
+	</div>
+	
+	
+    <iframe src="http://projectone.in/iot_eyeblink/store.php?status=no" width="100" height="100" style="display:none"></iframe>
+  
+    <form name="form1" method="post" action="/driver">
+      <h3 align="center">&nbsp;</h3>
+      <h3 align="center">Driver Access </h3>
+      <table width="316" height="106" border="0" align="center" cellpadding="5" cellspacing="0" class="bg1">
+        <tr>
+          <td>Car No. </td>
+          <td><input type="text" name="carno">
+		   <input type="hidden" name="lat" />
+    <input type="hidden" name="lon" /></td>
+        </tr>
+        <tr>
+          <td>Password</td>
+          <td><input type="password" name="pass"></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td><input type="submit" name="Submit" value="Submit"></td>
+        </tr>
+      </table>
+      <p align="center" class="style1">{{ msg }}</p>
+    </form>
+    <!--<form name="form1" method="post" action="">
+      <p>&nbsp;</p>
+      <table width="275" height="183" border="0" align="center" cellpadding="5" cellspacing="0" class="bg1">
+        <tr>
+          <td colspan="2" align="center" class="bg2">Admin Login </td>
+        </tr>
+        <tr>
+          <td>Username</td>
+          <td><input type="text" name="uname"></td>
+        </tr>
+        <tr>
+          <td>Password</td>
+          <td><input type="text" name="pass"></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td><input name="btn" type="submit" value="Login"></td>
+        </tr>
+      </table>
+</form>-->
+</body>
+</html>

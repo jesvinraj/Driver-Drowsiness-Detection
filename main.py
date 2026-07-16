@@ -14,7 +14,7 @@ import urllib.parse
 mydb = mysql.connector.connect(
   host="127.0.0.1",
   user="root",
-  password="",
+  password="root1234",
   charset="utf8",
   database="eye_monitor"
 

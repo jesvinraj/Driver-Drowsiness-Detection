@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>Driver Drowsiness Monitoring</title>
+    <link href="../static/style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div align="center" class="hd">Driver Drowsiness - Monitoring System</div>
+	<div align="center" class="sd">
+	<a href="/">Home</a> |
+	<a href="/driver">Driver</a> |
+	<a href="/login">Admin</a> 
+	
+	</div>
+	
+	<h3 align="center">Car No.: {{ carno }}</h3>
+	<div align="center"><img src="{{ url_for('video_feed') }}">
+  </div>
+  
+  <p>&nbsp;</p>
+  <div align="center"><iframe src="/capture?carno={{ carno }}" width="800" height="800" frameborder="0"></iframe></div>
+  <p>&nbsp;</p>
+  </body>
+</html>
